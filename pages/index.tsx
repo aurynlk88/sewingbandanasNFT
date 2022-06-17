@@ -13,7 +13,7 @@ import { useState } from "react";
 import styles from "../styles/Theme.module.css";
 
 // Put Your NFT Drop Contract address from the dashboard here
-const myNftDropContractAddress = "0x322067594DBCE69A9a9711BC393440aA5e3Aaca1";
+const myNftDropContractAddress = "0xC94B138334Ff8B947B82d160cD1c300bcdeb908d";
 
 const Home: NextPage = () => {
   const nftDrop = useNFTDrop(myNftDropContractAddress);
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
 
     // Make sure the user is on the correct network (same network as your NFT Drop is).
     if (isOnWrongNetwork) {
-      switchNetwork && switchNetwork(ChainId.Mumbai);
+      switchNetwork && switchNetwork(ChainId.Rinkeby);
       return;
     }
 
